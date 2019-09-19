@@ -14,7 +14,7 @@ The following are the list of steps to follow to start the analysis on the insta
 1. Log on to the [pilot1 instance](https://pilot1.globusgenomics.org).
 2. Import the workflow "[MASTER-HISAT2-LIMMA-WF - FOR Demo - version2](https://pilot1.globusgenomics.org/u/arodri7/w/master-hisat2-limma-wf---for-demo---version2-imported-from-uploaded-file)" by clicking on the link and then clicking on "Import" icon.
 3. Import the workflow "[HISAT2-StringTie-BallGown-DATABAG-Phase1](https://pilot1.globusgenomics.org/u/arodri7/w/hisat2-stringtie-ballgown-databag-phase1-imported-from-uploaded-file)" by clicking on the link and then clicking on "Import" icon.
-  1. Make sure when you import the workflow, the name of your workflow is "HISAT2-StringTie-BallGown-DATABAG-Phase1". If it's not, please go ahead and rename the workflow.
+  * Make sure when you import the workflow, the name of your workflow is "HISAT2-StringTie-BallGown-DATABAG-Phase1". If it's not, please go ahead and rename the workflow.
     1. Click on the workflow of interest.
     2. Select "Rename" option.
     3. Rename the workflow to exactly "HISAT2-StringTie-BallGown-DATABAG-Phase1".

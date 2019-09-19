@@ -1,0 +1,515 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "MASTER-HISAT2-LIMMA-WF - FOR Demo - version2", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "Input_DataBag", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 244.125
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "ea618a6e-fd57-472f-b820-611fe6fe785d", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "PhenData", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 401.375, 
+                "top": 602.9583435058594
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "2dea9035-241e-4b95-8a9f-7f23c50e406d", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "GeneAnnotation", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 910.375, 
+                "top": 430
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "9ac6d549-cf85-4128-8b1e-91923b150765", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 3, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "GO - c5.bp.v6.2.symbols.gmt", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 1119.25, 
+                "top": 970.8125
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "d31d5a47-b6c8-4640-9cda-676ecfec81f9", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "Hallmark - h.all.v6.2.symbols.gmt", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 1119.25, 
+                "top": 1138.8125
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "78687e61-4ba6-4e23-8484-b594a0fad812", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": "create_batch_for_workflow", 
+            "errors": null, 
+            "id": 5, 
+            "input_connections": {
+                "data_source_cond|input_file": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Create batch for workflow", 
+                    "name": "data_source_cond"
+                }
+            ], 
+            "label": "Create Batch for HISAT2 Phase1", 
+            "name": "Create batch for workflow", 
+            "outputs": [
+                {
+                    "name": "batch_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 449.375, 
+                "top": 293.9375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "create_batch_for_workflow", 
+            "tool_state": "{\"input_params\": \"[]\", \"input_bags\": \"[{\\\"__index__\\\": 0, \\\"extra_data_source_cond\\\": {\\\"additional_input_library_name\\\": \\\"COH-data\\\", \\\"additional_input_label\\\": \\\"GTF\\\", \\\"data_source\\\": \\\"library\\\", \\\"additional_input_file\\\": \\\"gencode.v17.annotation.gtf\\\", \\\"__current_case__\\\": 1}}]\", \"__page__\": null, \"url\": \"\\\"**\\\"\", \"userapi\": \"\\\"**\\\"\", \"workflow_name\": \"\\\"HISAT2-StringTie-BallGown-DATABAG-Phase1\\\"\", \"historyid\": \"\\\"**\\\"\", \"data_source_cond\": \"{\\\"input_label\\\": \\\"DATABAG\\\", \\\"filetype\\\": \\\"fastqsanger\\\", \\\"data_source\\\": \\\"history\\\", \\\"__current_case__\\\": 0, \\\"input_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"multidataset_group\": \"\\\"yes\\\"\", \"data_group_cond\": \"{\\\"__current_case__\\\": 0, \\\"data_group\\\": \\\"no\\\", \\\"group_name\\\": \\\"None\\\"}\", \"__rerun_remap_job_id__\": null}", 
+            "tool_version": "1.0", 
+            "type": "tool", 
+            "uuid": "ce56614e-8354-46d3-82a8-04050aee1746", 
+            "workflow_outputs": []
+        }, 
+        "6": {
+            "annotation": "", 
+            "content_id": "batch_submit", 
+            "errors": null, 
+            "id": 6, 
+            "input_connections": {
+                "input": {
+                    "id": 5, 
+                    "output_name": "batch_file"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Workflow batch submit", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Workflow batch submit", 
+            "outputs": [
+                {
+                    "name": "log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 752.875, 
+                "top": 282.9375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "batch_submit", 
+            "tool_state": "{\"__page__\": null, \"url\": \"\\\"None\\\"\", \"__rerun_remap_job_id__\": null, \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"goauth\": \"\\\"None\\\"\", \"userapi\": \"\\\"None\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "ada2506b-ac83-4b9b-980e-d92bb23aa119", 
+            "workflow_outputs": []
+        }, 
+        "7": {
+            "annotation": "", 
+            "content_id": "monitor_batch", 
+            "errors": null, 
+            "id": 7, 
+            "input_connections": {
+                "input": {
+                    "id": 6, 
+                    "output_name": "log"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Monitor batch jobs", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Monitor batch jobs", 
+            "outputs": [
+                {
+                    "name": "summary", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 993.375, 
+                "top": 293.9375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "monitor_batch", 
+            "tool_state": "{\"url\": \"\\\"**\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"userapi\": \"\\\"None\\\"\", \"__page__\": null}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "f56c7a0b-79ad-415f-b4fd-f321410fd48e", 
+            "workflow_outputs": []
+        }, 
+        "8": {
+            "annotation": "", 
+            "content_id": "limma_voom_bags", 
+            "errors": null, 
+            "id": 8, 
+            "input_connections": {
+                "anno|geneanno": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "input|countsBag": {
+                    "id": 7, 
+                    "output_name": "summary"
+                }, 
+                "input|phenoData": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool limma", 
+                    "name": "anno"
+                }, 
+                {
+                    "description": "runtime parameter for tool limma", 
+                    "name": "input"
+                }, 
+                {
+                    "description": "runtime parameter for tool limma", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "limma", 
+            "outputs": [
+                {
+                    "name": "outTables", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "outReport", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "outFilt", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "outNorm", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "rscript", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "libinfo", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1764.8333740234375, 
+                "top": 265.8125
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "limma_voom_bags", 
+            "tool_state": "{\"adv\": \"{\\\"pAdjust\\\": \\\"BH\\\", \\\"lfc\\\": \\\"0.0\\\", \\\"robOption\\\": \\\"true\\\", \\\"topgenes\\\": \\\"10\\\", \\\"pVal\\\": \\\"0.05\\\", \\\"normalisationOption\\\": \\\"TMM\\\", \\\"treat\\\": \\\"false\\\"}\", \"__page__\": null, \"cont\": \"{\\\"cfile\\\": \\\"no\\\", \\\"rep_contrast\\\": [{\\\"__index__\\\": 0, \\\"contrast\\\": \\\"Control-Case\\\"}], \\\"__current_case__\\\": 1}\", \"deMethod\": \"{\\\"de_select\\\": \\\"voom\\\", \\\"__current_case__\\\": 0, \\\"weightOption\\\": \\\"false\\\"}\", \"f\": \"{\\\"filt\\\": {\\\"filt_select\\\": \\\"no\\\", \\\"__current_case__\\\": 1}}\", \"__rerun_remap_job_id__\": null, \"anno\": \"{\\\"annoOpt\\\": \\\"yes\\\", \\\"__current_case__\\\": 0, \\\"geneanno\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"input\": \"{\\\"factorLevelColumn\\\": \\\"ALK\\\", \\\"phenoData\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"countsBag\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"format\\\": \\\"bags\\\", \\\"__current_case__\\\": 2, \\\"factorColumn\\\": \\\"-1\\\"}\", \"out\": \"{\\\"rscript\\\": \\\"false\\\", \\\"rdaOption\\\": \\\"false\\\", \\\"normCounts\\\": \\\"false\\\", \\\"filtCounts\\\": \\\"false\\\", \\\"plots\\\": [\\\"i\\\", \\\"b\\\", \\\"m\\\", \\\"h\\\", \\\"s\\\"], \\\"libinfo\\\": \\\"false\\\"}\"}", 
+            "tool_version": "3.38.3+galaxy3", 
+            "type": "tool", 
+            "uuid": "8416051d-9d81-4dc8-bdf8-32fd132c4fc9", 
+            "workflow_outputs": []
+        }, 
+        "9": {
+            "annotation": "", 
+            "content_id": "Remove beginning1", 
+            "errors": null, 
+            "id": 9, 
+            "input_connections": {
+                "input": {
+                    "id": 8, 
+                    "output_name": "outNorm"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Remove beginning", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Remove beginning", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 527.5833435058594, 
+                "top": 980.8333740234375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "Remove beginning1", 
+            "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"num_lines\": \"\\\"1\\\"\", \"__page__\": null}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "0d532394-9540-4ddb-b4e9-8f45b5e1bdaf", 
+            "workflow_outputs": []
+        }, 
+        "10": {
+            "annotation": "", 
+            "content_id": "Cut1", 
+            "errors": null, 
+            "id": 10, 
+            "input_connections": {
+                "input": {
+                    "id": 9, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Cut", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Cut", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 749.25, 
+                "top": 1040.8125
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "Cut1", 
+            "tool_state": "{\"columnList\": \"\\\"c2,c6\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"delimiter\": \"\\\"T\\\"\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
+            "tool_version": "1.0.2", 
+            "type": "tool", 
+            "uuid": "3731579f-8781-4edf-9d93-7fe4fc90b33d", 
+            "workflow_outputs": []
+        }, 
+        "11": {
+            "annotation": "", 
+            "content_id": "sort1", 
+            "errors": null, 
+            "id": 11, 
+            "input_connections": {
+                "input": {
+                    "id": 10, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Sort", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Sort", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 936.25, 
+                "top": 1047.8125
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "sort1", 
+            "tool_state": "{\"__page__\": null, \"style\": \"\\\"gennum\\\"\", \"column\": \"\\\"3\\\"\", \"__rerun_remap_job_id__\": null, \"order\": \"\\\"DESC\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"column_set\": \"[]\"}", 
+            "tool_version": "1.0.3", 
+            "type": "tool", 
+            "uuid": "ace6928d-4eae-401e-b6fc-75e2316735c0", 
+            "workflow_outputs": []
+        }, 
+        "12": {
+            "annotation": "", 
+            "content_id": "fgsea", 
+            "errors": null, 
+            "id": 12, 
+            "input_connections": {
+                "rnk_file": {
+                    "id": 11, 
+                    "output_name": "out_file1"
+                }, 
+                "sets_file": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool fgsea", 
+                    "name": "rnk_file"
+                }, 
+                {
+                    "description": "runtime parameter for tool fgsea", 
+                    "name": "sets_file"
+                }
+            ], 
+            "label": null, 
+            "name": "fgsea", 
+            "outputs": [
+                {
+                    "name": "out_tab", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "out_pdf", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "out_rdata", 
+                    "type": "rdata"
+                }
+            ], 
+            "position": {
+                "left": 1414.25, 
+                "top": 914.8125
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "fgsea", 
+            "tool_state": "{\"__page__\": null, \"rnk_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"rda_opt\": \"\\\"true\\\"\", \"min_size\": \"\\\"15\\\"\", \"header\": \"\\\"false\\\"\", \"top_num\": \"\\\"15\\\"\", \"n_perm\": \"\\\"1000\\\"\", \"plot_opt\": \"\\\"true\\\"\", \"__rerun_remap_job_id__\": null, \"max_size\": \"\\\"500\\\"\", \"sets_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "1.8.0+galaxy1", 
+            "type": "tool", 
+            "uuid": "558118b4-3bd7-4016-a0ff-2fdbdf83ecef", 
+            "workflow_outputs": []
+        }, 
+        "13": {
+            "annotation": "", 
+            "content_id": "fgsea", 
+            "errors": null, 
+            "id": 13, 
+            "input_connections": {
+                "rnk_file": {
+                    "id": 11, 
+                    "output_name": "out_file1"
+                }, 
+                "sets_file": {
+                    "id": 4, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool fgsea", 
+                    "name": "rnk_file"
+                }, 
+                {
+                    "description": "runtime parameter for tool fgsea", 
+                    "name": "sets_file"
+                }
+            ], 
+            "label": null, 
+            "name": "fgsea", 
+            "outputs": [
+                {
+                    "name": "out_tab", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "out_pdf", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "out_rdata", 
+                    "type": "rdata"
+                }
+            ], 
+            "position": {
+                "left": 1429.25, 
+                "top": 1093.8125
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "fgsea", 
+            "tool_state": "{\"__page__\": null, \"rnk_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"rda_opt\": \"\\\"true\\\"\", \"min_size\": \"\\\"15\\\"\", \"header\": \"\\\"false\\\"\", \"top_num\": \"\\\"15\\\"\", \"n_perm\": \"\\\"1000\\\"\", \"plot_opt\": \"\\\"true\\\"\", \"__rerun_remap_job_id__\": null, \"max_size\": \"\\\"500\\\"\", \"sets_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "1.8.0+galaxy1", 
+            "type": "tool", 
+            "uuid": "7bc7bedb-f3ed-44d7-b4f7-d9f7bc32fc32", 
+            "workflow_outputs": []
+        }
+    }, 
+    "uuid": "2f757fec-13d0-4a17-adf9-ad8782d41be5"
+}

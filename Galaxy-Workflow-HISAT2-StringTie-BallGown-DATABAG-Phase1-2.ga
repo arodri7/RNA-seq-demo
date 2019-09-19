@@ -1,0 +1,162 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "HISAT2-StringTie-BallGown-DATABAG-Phase1", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "DATABAG", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 293.5, 
+                "top": 434.1458435058594
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "35c4bead-8f47-4136-b0ac-1cc20eaa5496", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "c13b3fbe-b51e-45d5-b205-63a20f6fb515"
+                }
+            ]
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "GTF", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 423, 
+                "top": 603.1458740234375
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "cf81c158-9bcd-49cb-b546-464788ed3380", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "41b8316f-82d1-42a8-9dd6-1e9b9bc62d26"
+                }
+            ]
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "hisat2_bags", 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {
+                "input_format|paired|input_file": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "HISAT2 - bags input", 
+            "outputs": [
+                {
+                    "name": "output_alignments", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 509, 
+                "top": 448.1458740234375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "hisat2_bags", 
+            "tool_state": "{\"alignment_options\": \"{\\\"__current_case__\\\": 0, \\\"alignment_options_selector\\\": \\\"defaults\\\"}\", \"input_format\": \"{\\\"paired\\\": {\\\"sample_name\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"paired_end_options\\\": {\\\"paired_end_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 1, \\\"paired_selector\\\": \\\"paired_bag\\\", \\\"input_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, \\\"input_format_selector\\\": \\\"fastq\\\", \\\"__current_case__\\\": 1}\", \"__page__\": null, \"max_primary\": \"\\\"5\\\"\", \"scoring_options\": \"{\\\"scoring_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"reference_genome\": \"{\\\"index\\\": \\\"hg19\\\", \\\"reference_genome_source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"spliced_options\": \"{\\\"spliced_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"paired_options\": \"{\\\"paired_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_options\": \"{\\\"input_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.0.5", 
+            "type": "tool", 
+            "uuid": "d3949b26-5853-4d0e-b1de-40a36cf4b65c", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output_alignments", 
+                    "uuid": "d6244b32-6305-43b7-b897-459f375a4ce6"
+                }
+            ]
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "featurecounts", 
+            "errors": null, 
+            "id": 3, 
+            "input_connections": {
+                "alignments": {
+                    "id": 2, 
+                    "output_name": "output_alignments"
+                }, 
+                "reference_gene_sets_source|reference_gene_sets": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool featureCounts", 
+                    "name": "alignments"
+                }, 
+                {
+                    "description": "runtime parameter for tool featureCounts", 
+                    "name": "reference_gene_sets_source"
+                }
+            ], 
+            "label": null, 
+            "name": "featureCounts", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 871.5, 
+                "top": 571.1458740234375
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput_summary": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_summary"
+                }
+            }, 
+            "tool_id": "featurecounts", 
+            "tool_state": "{\"__page__\": null, \"reference_gene_sets_source\": \"{\\\"reference_gene_sets\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1, \\\"source_select\\\": \\\"history\\\"}\", \"format\": \"\\\"tabdel_default\\\"\", \"__rerun_remap_job_id__\": null, \"threads\": \"\\\"2\\\"\", \"alignments\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"extended_parameters\": \"{\\\"__current_case__\\\": 0, \\\"parameters\\\": \\\"default\\\"}\"}", 
+            "tool_version": "FEATURECOUNTS: subread-1.4.6-p1", 
+            "type": "tool", 
+            "uuid": "561f556e-e9f7-40d4-9482-434c8bce12e3", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "c5b21a53-ae31-4994-a460-2e4b70f29c0d"
+                }
+            ]
+        }
+    }, 
+    "uuid": "5669d8f4-c698-41e1-baf3-e94f933f582c"
+}

@@ -1,0 +1,480 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "MASTER-HISAT2-WF - with input transfer", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": "globus_get_bioproject_data_from_ebi", 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Get Data with BioProject ID from the EBI server", 
+                    "name": "accession"
+                }
+            ], 
+            "label": "DATABAG", 
+            "name": "Get Data with BioProject ID from the EBI server", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 215, 
+                "top": 238
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "globus_get_bioproject_data_from_ebi", 
+            "tool_state": "{\"from_endpoint\": \"\\\"ebi#public\\\"\", \"globuscert\": \"\\\"**\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"accession\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"symlink\": \"\\\"**\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "9d64cc11-718a-43ba-9d3e-d1bef8df0cfa", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "GTF", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 326.5, 
+                "top": 390
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "9ac6d549-cf85-4128-8b1e-91923b150765", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "PhenData", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 2090.5, 
+                "top": 559
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "2dea9035-241e-4b95-8a9f-7f23c50e406d", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "create_batch_for_workflow", 
+            "errors": null, 
+            "id": 3, 
+            "input_connections": {
+                "data_source_cond|input_file": {
+                    "id": 0, 
+                    "output_name": "out_file1"
+                }, 
+                "input_bags_0|extra_data_source_cond|additional_input_file": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Create batch for workflow", 
+                    "name": "data_source_cond"
+                }
+            ], 
+            "label": "Create Batch for HISAT2 Phase1", 
+            "name": "Create batch for workflow", 
+            "outputs": [
+                {
+                    "name": "batch_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 540.5, 
+                "top": 281
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "create_batch_for_workflow", 
+            "tool_state": "{\"username\": \"\\\"**\\\"\", \"input_params\": \"[]\", \"input_bags\": \"[{\\\"__index__\\\": 0, \\\"extra_data_source_cond\\\": {\\\"additional_input_label\\\": \\\"GTF\\\", \\\"data_source\\\": \\\"history\\\", \\\"additional_input_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 0}}]\", \"__page__\": null, \"url\": \"\\\"**\\\"\", \"userapi\": \"\\\"**\\\"\", \"workflow_name\": \"\\\"HISAT2-StringTie-BallGown-DATABAG-Phase1\\\"\", \"historyid\": \"\\\"**\\\"\", \"data_source_cond\": \"{\\\"input_label\\\": \\\"DATABAG\\\", \\\"filetype\\\": \\\"fastqsanger\\\", \\\"data_source\\\": \\\"history\\\", \\\"__current_case__\\\": 0, \\\"input_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"multidataset_group\": \"\\\"yes\\\"\", \"data_group_cond\": \"{\\\"__current_case__\\\": 0, \\\"data_group\\\": \\\"no\\\", \\\"group_name\\\": \\\"None\\\"}\", \"__rerun_remap_job_id__\": null}", 
+            "tool_version": "1.0", 
+            "type": "tool", 
+            "uuid": "ce56614e-8354-46d3-82a8-04050aee1746", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "batch_submit", 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {
+                "input": {
+                    "id": 3, 
+                    "output_name": "batch_file"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Workflow batch submit", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Workflow batch submit", 
+            "outputs": [
+                {
+                    "name": "log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 844, 
+                "top": 271
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "batch_submit", 
+            "tool_state": "{\"__page__\": null, \"url\": \"\\\"None\\\"\", \"__rerun_remap_job_id__\": null, \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"goauth\": \"\\\"None\\\"\", \"userapi\": \"\\\"None\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "ada2506b-ac83-4b9b-980e-d92bb23aa119", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": "monitor_batch", 
+            "errors": null, 
+            "id": 5, 
+            "input_connections": {
+                "input": {
+                    "id": 4, 
+                    "output_name": "log"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Monitor batch jobs", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Monitor batch jobs", 
+            "outputs": [
+                {
+                    "name": "summary", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 1084.5, 
+                "top": 282
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "monitor_batch", 
+            "tool_state": "{\"url\": \"\\\"**\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"userapi\": \"\\\"None\\\"\", \"__page__\": null}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "f56c7a0b-79ad-415f-b4fd-f321410fd48e", 
+            "workflow_outputs": []
+        }, 
+        "6": {
+            "annotation": "", 
+            "content_id": "stringtie_merge_databag", 
+            "errors": null, 
+            "id": 6, 
+            "input_connections": {
+                "guide_gff": {
+                    "id": 1, 
+                    "output_name": "output"
+                }, 
+                "input_gtf": {
+                    "id": 5, 
+                    "output_name": "summary"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool StringTie merge", 
+                    "name": "guide_gff"
+                }, 
+                {
+                    "description": "runtime parameter for tool StringTie merge", 
+                    "name": "input_gtf"
+                }
+            ], 
+            "label": null, 
+            "name": "StringTie merge", 
+            "outputs": [
+                {
+                    "name": "out_gtf", 
+                    "type": "gtf"
+                }
+            ], 
+            "position": {
+                "left": 1326, 
+                "top": 362
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "stringtie_merge_databag", 
+            "tool_state": "{\"min_iso\": \"\\\"0.01\\\"\", \"min_fpkm\": \"\\\"1.0\\\"\", \"keep_introns\": \"\\\"false\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"min_len\": \"\\\"50\\\"\", \"guide_gff\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"min_cov\": \"\\\"0\\\"\", \"min_tpm\": \"\\\"1.0\\\"\", \"input_gtf\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"gap_len\": \"\\\"250\\\"\"}", 
+            "tool_version": "1.3.3", 
+            "type": "tool", 
+            "uuid": "ccd28e22-bf87-45fe-94e4-7ecc68fd8d34", 
+            "workflow_outputs": []
+        }, 
+        "7": {
+            "annotation": "", 
+            "content_id": "deseq2_bags2", 
+            "errors": null, 
+            "id": 7, 
+            "input_connections": {
+                "bags_format_cond|countsBag": {
+                    "id": 5, 
+                    "output_name": "summary"
+                }, 
+                "bags_format_cond|phenoData": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool DESeq2 with Bag2 inputs", 
+                    "name": "bags_format_cond"
+                }, 
+                {
+                    "description": "runtime parameter for tool DESeq2 with Bag2 inputs", 
+                    "name": "bags_format_cond"
+                }, 
+                {
+                    "description": "runtime parameter for tool DESeq2 with Bag2 inputs", 
+                    "name": "bags_format_cond"
+                }
+            ], 
+            "label": null, 
+            "name": "DESeq2 with Bag2 inputs", 
+            "outputs": [
+                {
+                    "name": "split_output", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "deseq_out", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "plots", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "counts_out", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 2439, 
+                "top": 511
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "deseq2_bags2", 
+            "tool_state": "{\"fit_type\": \"\\\"1\\\"\", \"__page__\": null, \"tximport\": \"{\\\"tximport_selector\\\": \\\"count\\\", \\\"__current_case__\\\": 1}\", \"outlier_replace_off\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"auto_mean_filter_off\": \"\\\"false\\\"\", \"bags_format_cond\": \"{\\\"factorLevelColumn\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"phenoData\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"countsBag\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"bags_format_type\\\": \\\"single\\\", \\\"__current_case__\\\": 1, \\\"factorColumn\\\": \\\"-1\\\"}\", \"outlier_filter_off\": \"\\\"false\\\"\", \"many_contrasts\": \"\\\"false\\\"\", \"normCounts\": \"\\\"false\\\"\", \"pdf\": \"\\\"true\\\"\"}", 
+            "tool_version": "2.11.38", 
+            "type": "tool", 
+            "uuid": "b815a5e9-9d5a-4661-974e-36c2e10a4dfe", 
+            "workflow_outputs": []
+        }, 
+        "8": {
+            "annotation": "", 
+            "content_id": "create_batch_for_workflow", 
+            "errors": null, 
+            "id": 8, 
+            "input_connections": {
+                "data_source_cond|input_file": {
+                    "id": 5, 
+                    "output_name": "summary"
+                }, 
+                "input_bags_0|extra_data_source_cond|additional_input_file": {
+                    "id": 6, 
+                    "output_name": "out_gtf"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Create batch for workflow", 
+                    "name": "data_source_cond"
+                }
+            ], 
+            "label": "Create Batch for HISAT2 Phase2", 
+            "name": "Create batch for workflow", 
+            "outputs": [
+                {
+                    "name": "batch_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1656, 
+                "top": 233
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "create_batch_for_workflow", 
+            "tool_state": "{\"username\": \"\\\"**\\\"\", \"input_params\": \"[]\", \"input_bags\": \"[{\\\"__index__\\\": 0, \\\"extra_data_source_cond\\\": {\\\"additional_input_label\\\": \\\"GTF\\\", \\\"data_source\\\": \\\"history\\\", \\\"additional_input_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 0}}]\", \"__page__\": null, \"url\": \"\\\"**\\\"\", \"userapi\": \"\\\"**\\\"\", \"workflow_name\": \"\\\"HISAT2-StringTie-BallGown-DATABAG-Phase2\\\"\", \"historyid\": \"\\\"**\\\"\", \"data_source_cond\": \"{\\\"input_label\\\": \\\"DATABAG\\\", \\\"filetype\\\": \\\"fastqsanger\\\", \\\"data_source\\\": \\\"history\\\", \\\"__current_case__\\\": 0, \\\"input_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"multidataset_group\": \"\\\"no\\\"\", \"data_group_cond\": \"{\\\"__current_case__\\\": 0, \\\"data_group\\\": \\\"no\\\", \\\"group_name\\\": \\\"None\\\"}\", \"__rerun_remap_job_id__\": null}", 
+            "tool_version": "1.0", 
+            "type": "tool", 
+            "uuid": "358ff021-15a9-416d-921a-ddf10a51dc29", 
+            "workflow_outputs": []
+        }, 
+        "9": {
+            "annotation": "", 
+            "content_id": "batch_submit", 
+            "errors": null, 
+            "id": 9, 
+            "input_connections": {
+                "input": {
+                    "id": 8, 
+                    "output_name": "batch_file"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Workflow batch submit", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Workflow batch submit", 
+            "outputs": [
+                {
+                    "name": "log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1928, 
+                "top": 263
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "batch_submit", 
+            "tool_state": "{\"__page__\": null, \"url\": \"\\\"None\\\"\", \"__rerun_remap_job_id__\": null, \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"goauth\": \"\\\"None\\\"\", \"userapi\": \"\\\"None\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "5fd34bfc-53d9-429c-96c4-92afebff5e26", 
+            "workflow_outputs": []
+        }, 
+        "10": {
+            "annotation": "", 
+            "content_id": "monitor_batch", 
+            "errors": null, 
+            "id": 10, 
+            "input_connections": {
+                "input": {
+                    "id": 9, 
+                    "output_name": "log"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Monitor batch jobs", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Monitor batch jobs", 
+            "outputs": [
+                {
+                    "name": "summary", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 2169.5, 
+                "top": 268
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "monitor_batch", 
+            "tool_state": "{\"url\": \"\\\"**\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"userapi\": \"\\\"None\\\"\", \"__page__\": null}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "838a6cc3-a5ae-48b4-9b99-b1cc5e4bc002", 
+            "workflow_outputs": []
+        }, 
+        "11": {
+            "annotation": "", 
+            "content_id": "ballgown_bags", 
+            "errors": null, 
+            "id": 11, 
+            "input_connections": {
+                "input_dir_object": {
+                    "id": 10, 
+                    "output_name": "summary"
+                }, 
+                "phendata": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Ballgown", 
+                    "name": "phendata"
+                }, 
+                {
+                    "description": "runtime parameter for tool Ballgown", 
+                    "name": "input_dir_object"
+                }
+            ], 
+            "label": null, 
+            "name": "Ballgown", 
+            "outputs": [
+                {
+                    "name": "bgo", 
+                    "type": "rdata"
+                }, 
+                {
+                    "name": "output", 
+                    "type": "csv"
+                }, 
+                {
+                    "name": "outputgn", 
+                    "type": "csv"
+                }, 
+                {
+                    "name": "toutputtranscript", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "toutput", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 2443.5, 
+                "top": 258
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "ballgown_bags", 
+            "tool_state": "{\"__page__\": null, \"trexpression\": \"\\\"0.5\\\"\", \"input_dir_object\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"file_format\": \"{\\\"__current_case__\\\": 0, \\\"format\\\": \\\"tsv\\\"}\", \"phendata\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null}", 
+            "tool_version": "2.2.0", 
+            "type": "tool", 
+            "uuid": "ae592c63-7ed7-4d54-95a0-6464c8cbe0d1", 
+            "workflow_outputs": []
+        }
+    }, 
+    "uuid": "9a6d239d-2387-49fb-8fae-905f4a6fd158"
+}

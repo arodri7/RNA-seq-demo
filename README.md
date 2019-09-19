@@ -18,3 +18,22 @@ The following are the list of steps to follow to start the analysis on the insta
       1. Click on the workflow of interest.
       2. Select "Rename" option.
       3. Rename the workflow to exactly "HISAT2-StringTie-BallGown-DATABAG-Phase1".
+4. If you have not created an API key before, please create one now.
+    1. Click on the "User" menu link and then on "Preferences".
+    2. Click on "Manage API Key" link.
+    3. Click on "Create new key" link.
+5. You will need to import the data to your history. We have published a history called "[RNA-seq-demo-raw-data](https://pilot1.globusgenomics.org/u/arodri7/h/rna-seq-demo-raw-data)". You can follow the link and import it to your own environment by clicking on the "import" link. You will need to make this your active history:
+    1. Go to the main page of the [pilot1 instance](https://pilot1.globusgenomics.org).
+    2. Click on the gear icon at the top of the history panel.
+    3. Select the "Saved histories" link.
+    4. Select the history you have just imported "RNA-seq-demo-raw-data" and click "Switch" link.
+6. Now you should be ready to submit the workflow.
+    1. Go to the "Workflows" link on top of the page.
+    2. Select the workflow "MASTER-HISAT2-LIMMA-WF - FOR Demo - version2" and click on "Run".
+    3. Fill in the appropriate inputs.
+    4. Submit the workflow by clicking on "Run Workflow".
+    5. Wait a while for your results.
+    
+## Outputs
+The following are the outputs you should see.
+  

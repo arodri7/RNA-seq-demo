@@ -3,5 +3,5 @@ Galaxy based RNA-seq workflow from data transfer to gene expression and Function
 
 This tutorial will help you submit a sample RNA-seq workflow using the [Pilot GlobusGenomics instance](https://pilot1.globusgenomics.org).
 
-#DATA
+## DATA
 The sample workflow uses data from [Bioproject PRJNA378660](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA378660). It is composed of 9 samples (5 control, 4 cases). The input files are fastq files and they have previously been uploaded to our instance to prevent additional data upload to the instance.

@@ -21,11 +21,11 @@ The following are the list of steps to follow to start the analysis on the insta
       <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/RenameWorkflow.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/RenameWorkflow.png" width="300" height="225" alt="importWorkflow"/>
 4. If you have not created an API key before, please create one now.
     1. Click on the "User" menu link and then on "Preferences".
-    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/UserMenu.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/UserMenu.png" width="300" height="225" alt="importWorkflow"/>
+    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/UserMenu.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/UserMenu.png" width="600" height="150" alt="importWorkflow"/>
     2. Click on "Manage API Key" link.
-    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/manageAPI.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/manageAPI.png" width="300" height="225" alt="importWorkflow"/>
+    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/manageAPI.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/manageAPI.png" width="400" height="150" alt="importWorkflow"/>
     3. Click on "Create new key" link.
-    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/createAPI.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/createAPI.png" width="300" height="225" alt="importWorkflow"/>
+    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/createAPI.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/createAPI.png" width="400" height="50" alt="importWorkflow"/>
 5. You will need to import the data to your history. We have published a history called "[RNA-seq-demo-raw-data](https://pilot1.globusgenomics.org/u/arodri7/h/rna-seq-demo-raw-data)". You can follow the link and import it to your own environment by clicking on the "import" link. You will need to make this your active history:
     1. Go to the main page of the [pilot1 instance](https://pilot1.globusgenomics.org).
     2. Click on the gear icon at the top of the history panel.

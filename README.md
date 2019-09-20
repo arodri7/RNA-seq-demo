@@ -29,21 +29,21 @@ The following are the list of steps to follow to start the analysis on the insta
 5. You will need to import the data to your history. We have published a history called "[RNA-seq-demo-raw-data](https://pilot1.globusgenomics.org/u/arodri7/h/rna-seq-demo-raw-data)". You can follow the link and import it to your own environment by clicking on the "import" link. You will need to make this your active history:
     1. Go to the main page of the [pilot1 instance](https://pilot1.globusgenomics.org).
     2. Click on the gear icon at the top of the history panel.
-    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/gearIcon.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/gearIcon.png" width="400" height="50" alt="importWorkflow"/>
+    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/gearIcon.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/gearIcon.png" width="200" height="50" alt="importWorkflow"/>
     3. Select the "Saved histories" link.
-    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/savedHistories.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/savedHistories.png" width="400" height="50" alt="importWorkflow"/>
+    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/savedHistories.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/savedHistories.png" width="150" height="250" alt="importWorkflow"/>
     4. Select the history you have just imported "RNA-seq-demo-raw-data" and click "Switch" link.
-    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/switchHistory.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/switchHistory.png" width="400" height="50" alt="importWorkflow"/>
+    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/switchHistory.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/switchHistory.png" width="300" height="250" alt="importWorkflow"/>
 6. Now you should be ready to submit the workflow.
     1. Go to the "Workflows" link on top of the page.
     <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsMenu.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsMenu.png" width="400" height="50" alt="importWorkflow"/>
     2. Select the workflow "MASTER-HISAT2-LIMMA-WF - FOR Demo - version2" and click on "Run".
+    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsRun.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsRun.png" width="400" height="300" alt="importWorkflow"/>
     3. Fill in the appropriate inputs.
-    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsParams.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsParams.png" width="400" height="50" alt="importWorkflow"/>
+    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsParams.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsParams.png" width="1000" height="1000" alt="importWorkflow"/>
     4. Submit the workflow by clicking on "Run Workflow".
-    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsRun.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsRun.png" width="400" height="50" alt="importWorkflow"/>
     5. Wait a while for your results.
-    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsSubmitted.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsSubmitted.png" width="400" height="50" alt="importWorkflow"/>
+    <br><img src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsSubmitted.png" data-canonical-src="https://github.com/arodri7/RNA-seq-demo/blob/master/images/workflowsSubmitted.png" width="500" height="400" alt="importWorkflow"/>
 
     
 ## Outputs

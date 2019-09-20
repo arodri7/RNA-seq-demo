@@ -47,5 +47,8 @@ The following are the list of steps to follow to start the analysis on the insta
 
     
 ## Outputs
-The following are the outputs you should see.
+The following are the main outputs you should see:
+1. Bag object of the BAM files and summarization files for each sample. You can view each sample summarization file by browsing your "Saved histories".
+2. Differentially expressed list of genes using LIMMA R package.
+3. Functional gene set enrichment analysis using the FGSEA R package.
   

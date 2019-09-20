@@ -12,8 +12,7 @@ There are two workflows that the user should import into their account. The [fir
 ## Steps
 The following are the list of steps to follow to start the analysis on the instance.
 1. Log on to the [pilot1 instance](https://pilot1.globusgenomics.org).
-2. Import the workflow "[MASTER-HISAT2-LIMMA-WF - FOR Demo - version2](https://pilot1.globusgenomics.org/u/arodri7/w/master-hisat2-limma-wf---for-demo---version2-imported-from-uploaded-file)" by clicking on the link and then clicking on "Import" icon ![importImage].
-[importImage](https://github.com/arodri7/RNA-seq-demo/blob/master/images/ImportImage.png)
+2. Import the workflow "[MASTER-HISAT2-LIMMA-WF - FOR Demo - version2](https://pilot1.globusgenomics.org/u/arodri7/w/master-hisat2-limma-wf---for-demo---version2-imported-from-uploaded-file)" by clicking on the link and then clicking on "Import" icon ![alt text](https://github.com/arodri7/RNA-seq-demo/blob/master/images/ImportImage.png "Import Workflow")
 3. Import the workflow "[HISAT2-StringTie-BallGown-DATABAG-Phase1](https://pilot1.globusgenomics.org/u/arodri7/w/hisat2-stringtie-ballgown-databag-phase1-imported-from-uploaded-file)" by clicking on the link and then clicking on "Import" icon.
     * Make sure when you import the workflow, the name of your workflow is "HISAT2-StringTie-BallGown-DATABAG-Phase1". If it's not, please go ahead and rename the workflow.
       1. Click on the workflow of interest.
